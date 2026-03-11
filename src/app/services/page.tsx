@@ -28,9 +28,9 @@ export default function ServicesPage() {
         title="Our Services"
         subtitle="End-to-end software solutions across every major technology discipline."
       />
-      <section className="py-12 md:py-16 lg:py-24">
+      <section className="py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {services.map((service) => {
               const Icon = iconMap[service.icon];
               return (
@@ -42,7 +42,7 @@ export default function ServicesPage() {
                     {Icon && <Icon className="w-7 h-7 text-[#e8735f]" />}
                   </div>
                   <h3 className="text-xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-3">{service.name}</h3>
-                  <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm leading-relaxed mb-6 flex-1">{service.description}</p>
+                  <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm leading-relaxed mb-4 flex-1">{service.description}</p>
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center gap-2 text-[#e8735f] text-sm font-medium hover:text-[#d4654f] transition-colors"

@@ -92,9 +92,9 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="py-10 md:py-16 bg-white dark:bg-[#1a1a1a] border-t border-[#e5ddd8] dark:border-[#3d3d3d]/50">
+        <section className="py-10 md:py-12 bg-white dark:bg-[#1a1a1a] border-t border-[#e5ddd8] dark:border-[#3d3d3d]/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-8">More Articles</h2>
+            <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-6">More Articles</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {relatedPosts.map((related) => (
                 <Link

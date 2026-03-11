@@ -10,7 +10,7 @@ export default function SectionHeader({ badge, title, subtitle, align = "center"
   const maxWidthClass = align === "center" ? "mx-auto" : "";
 
   return (
-    <div className={`mb-12 ${alignClass}`}>
+    <div className={`mb-8 ${alignClass}`}>
       {badge && (
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e8735f]/10 border border-[#e8735f]/20 text-[#e8735f] text-sm font-medium mb-4">
           {badge}

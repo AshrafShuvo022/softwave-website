@@ -10,7 +10,7 @@ interface PageHeroProps {
 
 export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
   return (
-    <section className="relative pt-24 md:pt-32 pb-12 md:pb-20 overflow-hidden">
+    <section className="relative pt-20 md:pt-28 pb-8 md:pb-14 overflow-hidden">
       {/* Glow effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[200px] md:w-[600px] md:h-[400px] bg-[#e8735f]/5 rounded-full blur-[60px] md:blur-[100px] pointer-events-none" />
 

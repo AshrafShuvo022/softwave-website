@@ -38,14 +38,14 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-[#f5f0ec] dark:bg-[#1a1a1a]">
+    <section className="py-10 md:py-14 bg-[#f5f0ec] dark:bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="By the Numbers"
           title="Quality You Can Measure"
           subtitle="Every project is an opportunity to raise the bar."
         />
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}

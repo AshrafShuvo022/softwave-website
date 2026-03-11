@@ -34,9 +34,9 @@ export default function AboutPage() {
       />
 
       {/* Our Story */}
-      <section className="py-12 md:py-16 lg:py-24">
+      <section className="py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 md:gap-12 items-center">
             <div>
               <SectionHeader badge="Our Story" title="Where We Came From" align="left" />
               <div className="space-y-4 text-[#4b5563] dark:text-[#9ca3af] leading-relaxed">
@@ -69,7 +69,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-12 md:py-16 lg:py-24 bg-[#f5f0ec] dark:bg-[#1a1a1a]">
+      <section className="py-10 md:py-14 bg-[#f5f0ec] dark:bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader badge="Direction" title="Mission & Vision" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -96,7 +96,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-12 md:py-16 lg:py-24">
+      <section className="py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader badge="What We Stand For" title="Our Values" subtitle="The principles that guide every decision we make." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -117,10 +117,10 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16 lg:py-24 bg-[#f5f0ec] dark:bg-[#1a1a1a]">
+      <section className="py-10 md:py-14 bg-[#f5f0ec] dark:bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-4">Ready to Work Together?</h2>
-          <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm sm:text-base md:text-lg mb-8">Let&apos;s discuss what we can build for you.</p>
+          <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm sm:text-base md:text-lg mb-6">Let&apos;s discuss what we can build for you.</p>
           <Link
             href="/contact"
             className="inline-flex items-center px-8 py-4 rounded-xl bg-[#e8735f] text-white font-semibold hover:bg-[#d4654f] transition-all hover:scale-105"

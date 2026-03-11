@@ -14,9 +14,9 @@ const services = [
 
 export default function ServicesStrip() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-[#faf4f1] dark:bg-[#0d0d0d] border-y border-[#e5ddd8]/50 dark:border-[#3d3d3d]/30">
+    <section className="py-10 md:py-14 bg-[#faf4f1] dark:bg-[#0d0d0d] border-y border-[#e5ddd8]/50 dark:border-[#3d3d3d]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-[#6b7280] text-sm font-medium uppercase tracking-widest mb-12">
+        <p className="text-center text-[#6b7280] text-sm font-medium uppercase tracking-widest mb-8">
           What We Do
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
