@@ -6,7 +6,13 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about Softwave Innovation — our story, mission, values, and approach to building software.",
+  description:
+    "Learn about Softwave Innovation — our story, mission, values, and approach to building software that delivers real business value.",
+  openGraph: {
+    title: "About Softwave Innovation",
+    description: "Our story, mission, and values.",
+    url: "https://softwaveinnovation.com/about",
+  },
 };
 
 const values = [

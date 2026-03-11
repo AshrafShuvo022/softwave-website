@@ -7,7 +7,13 @@ import type { ElementType } from "react";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Explore our full range of software development services — web, mobile, AI/ML, data analytics, and cloud.",
+  description:
+    "Explore Softwave Innovation's full range of services: web development, mobile apps, AI/ML solutions, data analytics, and cloud infrastructure.",
+  openGraph: {
+    title: "Our Services — Softwave Innovation",
+    description: "Web, mobile, AI/ML, data analytics, and cloud solutions.",
+    url: "https://softwaveinnovation.com/services",
+  },
 };
 
 const iconMap: Record<string, ElementType> = {

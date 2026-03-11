@@ -6,7 +6,13 @@ import { ArrowRight, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Insights, updates, and technical articles from the Softwave Innovation team.",
+  description:
+    "Technical insights, industry trends, and engineering perspectives from the Softwave Innovation team.",
+  openGraph: {
+    title: "Softwave Innovation Blog",
+    description: "Technical insights and industry trends.",
+    url: "https://softwaveinnovation.com/blog",
+  },
 };
 
 export default function BlogPage() {
