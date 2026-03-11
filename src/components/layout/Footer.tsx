@@ -118,12 +118,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-[#e5ddd8] dark:border-[#3d3d3d]/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-[#e5ddd8] dark:border-[#3d3d3d]/50 flex items-center justify-center">
           <p className="text-[#6b7280] text-sm">
             &copy; {new Date().getFullYear()} Softwave Innovation. All rights reserved.
-          </p>
-          <p className="text-[#6b7280] text-sm">
-            Built with Next.js &amp; TypeScript
           </p>
         </div>
       </div>
