@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import PageHero from "@/components/shared/PageHero";
-import { Mail, Linkedin, Github, Clock, CheckCircle2 } from "lucide-react";
+import { Mail, Linkedin, Github, Clock, CheckCircle2, Loader2 } from "lucide-react";
 
 const serviceOptions = [
   "Web Development",
@@ -15,6 +15,8 @@ const serviceOptions = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -23,9 +25,31 @@ export default function ContactPage() {
     message: "",
   });
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || "Something went wrong. Please try again.");
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -39,6 +63,7 @@ export default function ContactPage() {
       <section className="py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 md:gap-12">
+
             {/* Form */}
             <div className="lg:col-span-3">
               {submitted ? (
@@ -47,7 +72,9 @@ export default function ContactPage() {
                     <CheckCircle2 className="w-8 h-8 text-[#e8735f]" />
                   </div>
                   <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-3">Message Sent!</h2>
-                  <p className="text-[#4b5563] dark:text-[#9ca3af]">Thanks for reaching out. We&apos;ll get back to you within 24 hours.</p>
+                  <p className="text-[#4b5563] dark:text-[#9ca3af]">
+                    Thanks for reaching out. We&apos;ll get back to you within 24 hours.
+                  </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -75,6 +102,7 @@ export default function ContactPage() {
                       />
                     </div>
                   </div>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-[#1a1a1a] dark:text-[#faf4f1] mb-2">Company</label>
@@ -93,13 +121,14 @@ export default function ContactPage() {
                         onChange={(e) => setForm({ ...form, service: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-white dark:bg-[#1a1a1a] border border-[#e5ddd8] dark:border-[#3d3d3d]/50 text-[#1a1a1a] dark:text-[#faf4f1] focus:outline-none focus:border-[#e8735f]/50 transition-colors"
                       >
-                        <option value="" className="bg-white dark:bg-[#1a1a1a]">Select a service</option>
+                        <option value="">Select a service</option>
                         {serviceOptions.map((s) => (
-                          <option key={s} value={s} className="bg-white dark:bg-[#1a1a1a]">{s}</option>
+                          <option key={s} value={s}>{s}</option>
                         ))}
                       </select>
                     </div>
                   </div>
+
                   <div>
                     <label className="block text-sm font-medium text-[#1a1a1a] dark:text-[#faf4f1] mb-2">Message *</label>
                     <textarea
@@ -111,11 +140,27 @@ export default function ContactPage() {
                       placeholder="Tell us about your project..."
                     />
                   </div>
+
+                  {/* Error message */}
+                  {error && (
+                    <div className="px-4 py-3 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm">
+                      {error}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 rounded-xl bg-[#e8735f] text-white font-semibold hover:bg-[#d4654f] transition-all hover:scale-[1.02] shadow-lg shadow-[#e8735f]/20"
+                    disabled={loading}
+                    className="w-full px-8 py-4 rounded-xl bg-[#e8735f] text-white font-semibold hover:bg-[#d4654f] transition-all hover:scale-[1.02] shadow-lg shadow-[#e8735f]/20 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
                   >
-                    Send Message
+                    {loading ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      "Send Message"
+                    )}
                   </button>
                 </form>
               )}
@@ -128,17 +173,19 @@ export default function ContactPage() {
                   <Clock className="w-5 h-5 text-[#e8735f]" />
                 </div>
                 <h3 className="text-[#1a1a1a] dark:text-[#faf4f1] font-bold mb-1">Quick Response</h3>
-                <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm">We respond to all inquiries within 24 hours, typically much faster.</p>
+                <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm">
+                  We respond to all inquiries within 24 hours, typically much faster.
+                </p>
               </div>
 
               <div className="p-6 rounded-2xl bg-white dark:bg-[#1a1a1a] border border-[#e5ddd8] dark:border-[#3d3d3d]/50">
                 <h3 className="text-[#1a1a1a] dark:text-[#faf4f1] font-bold mb-4">Contact Us Directly</h3>
                 <a
-                  href="mailto:hello@softwaveinnovation.com"
-                  className="flex items-center gap-3 text-[#4b5563] dark:text-[#9ca3af] hover:text-[#e8735f] transition-colors mb-3"
+                  href="mailto:contact@softwaveinnovation.com"
+                  className="flex items-center gap-3 text-[#4b5563] dark:text-[#9ca3af] hover:text-[#e8735f] transition-colors"
                 >
                   <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span className="text-sm break-all">hello@softwaveinnovation.com</span>
+                  <span className="text-sm break-all">contact@softwaveinnovation.com</span>
                 </a>
               </div>
 
@@ -166,6 +213,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
