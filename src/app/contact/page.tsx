@@ -137,8 +137,8 @@ export default function ContactPage() {
                   href="mailto:hello@softwaveinnovation.com"
                   className="flex items-center gap-3 text-[#4b5563] dark:text-[#9ca3af] hover:text-[#e8735f] transition-colors mb-3"
                 >
-                  <Mail className="w-5 h-5" />
-                  <span className="text-sm">hello@softwaveinnovation.com</span>
+                  <Mail className="w-5 h-5 flex-shrink-0" />
+                  <span className="text-sm break-all">hello@softwaveinnovation.com</span>
                 </a>
               </div>
 

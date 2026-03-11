@@ -52,8 +52,8 @@ export default function AboutPage() {
                 { label: "Custom Solutions", value: "100%" },
                 { label: "Client Satisfaction", value: "★★★★★" },
               ].map((stat) => (
-                <div key={stat.label} className="p-6 rounded-2xl bg-white dark:bg-[#1a1a1a] border border-[#e5ddd8] dark:border-[#3d3d3d]/50 text-center">
-                  <div className="text-3xl font-bold text-[#e8735f] mb-2">{stat.value}</div>
+                <div key={stat.label} className="p-4 sm:p-6 rounded-2xl bg-white dark:bg-[#1a1a1a] border border-[#e5ddd8] dark:border-[#3d3d3d]/50 text-center">
+                  <div className="text-2xl sm:text-3xl font-bold text-[#e8735f] mb-2 break-words">{stat.value}</div>
                   <div className="text-[#4b5563] dark:text-[#9ca3af] text-sm">{stat.label}</div>
                 </div>
               ))}

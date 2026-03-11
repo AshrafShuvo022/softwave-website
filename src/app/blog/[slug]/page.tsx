@@ -69,7 +69,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="h-px bg-[#e5ddd8] dark:bg-[#3d3d3d]/50 mb-10" />
 
           {/* MDX Content */}
-          <div className="prose-custom">
+          <div className="prose-custom max-w-full overflow-hidden">
             <MDXRemote source={post.content} />
           </div>
 

@@ -51,8 +51,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-6 leading-[1.1] tracking-tight break-words"
         >
-          We Build Software That
-          <br />
+          We Build Software That{" "}
           <span className="text-[#e8735f]">Moves the World Forward</span>
         </motion.h1>
 

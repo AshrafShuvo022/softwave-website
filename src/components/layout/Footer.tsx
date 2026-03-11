@@ -103,7 +103,7 @@ export default function Footer() {
             <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm mb-4">Ready to start your next project? Let&apos;s talk.</p>
             <a
               href="mailto:hello@softwaveinnovation.com"
-              className="text-[#e8735f] text-sm hover:text-[#d4654f] transition-colors"
+              className="text-[#e8735f] text-sm hover:text-[#d4654f] transition-colors break-all"
             >
               hello@softwaveinnovation.com
             </a>

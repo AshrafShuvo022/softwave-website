@@ -43,7 +43,7 @@ export default function Navbar() {
               alt="Softwave Innovation"
               width={2500}
               height={928}
-              className="h-12 md:h-14 w-auto"
+              className="h-10 md:h-14 w-auto"
               priority
             />
           </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium transition-colors min-h-[44px] flex items-center ${
                   pathname === link.href
                     ? "text-[#e8735f]"
                     : "text-[#4b5563] dark:text-[#9ca3af]"
