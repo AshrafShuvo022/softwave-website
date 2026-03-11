@@ -24,7 +24,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-[#faf4f1] dark:bg-[#0d0d0d]">
+    <section className="py-12 md:py-16 lg:py-24 bg-[#faf4f1] dark:bg-[#0d0d0d]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Why Softwave"
@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="p-8 rounded-2xl bg-white dark:bg-[#1a1a1a] border border-[#e5ddd8] dark:border-[#3d3d3d]/50 hover:border-[#e8735f]/30 transition-colors group"
+                className="p-4 md:p-6 lg:p-8 rounded-2xl bg-white dark:bg-[#1a1a1a] border border-[#e5ddd8] dark:border-[#3d3d3d]/50 hover:border-[#e8735f]/30 transition-colors group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-[#e8735f]/10 flex items-center justify-center mb-6 group-hover:bg-[#e8735f]/20 transition-colors">
                   <Icon className="w-7 h-7 text-[#e8735f]" />

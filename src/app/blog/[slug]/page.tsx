@@ -30,7 +30,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="bg-[#faf4f1] dark:bg-[#0d0d0d] min-h-screen">
-      <div className="pt-24 pb-16">
+      <div className="pt-20 md:pt-24 pb-10 md:pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back link */}
           <Link
@@ -46,10 +46,10 @@ export default async function BlogPostPage({ params }: Props) {
             <span className="inline-block px-3 py-1 rounded-full bg-[#e8735f]/10 text-[#e8735f] text-sm font-medium mb-4">
               {post.category}
             </span>
-            <h1 className="text-3xl md:text-5xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-6 leading-tight break-words">
               {post.title}
             </h1>
-            <div className="flex flex-wrap items-center gap-6 text-[#6b7280] text-sm">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-[#6b7280] text-xs sm:text-sm">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
                 {new Date(post.date).toLocaleDateString("en-US", {
@@ -92,10 +92,10 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="py-16 bg-white dark:bg-[#1a1a1a] border-t border-[#e5ddd8] dark:border-[#3d3d3d]/50">
+        <section className="py-10 md:py-16 bg-white dark:bg-[#1a1a1a] border-t border-[#e5ddd8] dark:border-[#3d3d3d]/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-8">More Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {relatedPosts.map((related) => (
                 <Link
                   key={related.slug}

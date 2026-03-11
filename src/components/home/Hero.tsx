@@ -14,7 +14,7 @@ export default function Hero() {
           opacity: [0.3, 0.5, 0.3],
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#e8735f]/8 dark:bg-[#e8735f]/10 rounded-full blur-[120px] pointer-events-none"
+        className="absolute top-1/4 left-1/4 w-[200px] h-[200px] md:w-[500px] md:h-[500px] bg-[#e8735f]/8 dark:bg-[#e8735f]/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"
       />
       <motion.div
         animate={{
@@ -22,7 +22,7 @@ export default function Hero() {
           opacity: [0.2, 0.4, 0.2],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#e8735f]/5 rounded-full blur-[100px] pointer-events-none"
+        className="absolute bottom-1/4 right-1/4 w-[150px] h-[150px] md:w-[400px] md:h-[400px] bg-[#e8735f]/5 rounded-full blur-[60px] md:blur-[100px] pointer-events-none"
       />
 
       {/* Grid pattern overlay */}
@@ -49,7 +49,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-6 leading-[1.1] tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-6 leading-[1.1] tracking-tight break-words"
         >
           We Build Software That
           <br />
@@ -60,7 +60,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[#4b5563] dark:text-[#9ca3af] text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-[#4b5563] dark:text-[#9ca3af] text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           From web applications to AI systems, we craft custom software solutions that help businesses grow, automate, and compete at the highest level.
         </motion.p>
@@ -69,18 +69,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full sm:w-auto"
         >
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#e8735f] text-white font-semibold hover:bg-[#d4654f] transition-all hover:scale-105 shadow-lg shadow-[#e8735f]/20"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#e8735f] text-white font-semibold hover:bg-[#d4654f] transition-all hover:scale-105 shadow-lg shadow-[#e8735f]/20 w-full sm:w-auto"
           >
             Get Started
             <ArrowRight className="w-5 h-5" />
           </Link>
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white dark:bg-[#1a1a1a] text-[#1a1a1a] dark:text-[#faf4f1] font-semibold border border-[#e5ddd8] dark:border-[#3d3d3d] hover:border-[#e8735f]/50 transition-all hover:scale-105"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white dark:bg-[#1a1a1a] text-[#1a1a1a] dark:text-[#faf4f1] font-semibold border border-[#e5ddd8] dark:border-[#3d3d3d] hover:border-[#e8735f]/50 transition-all hover:scale-105 w-full sm:w-auto"
           >
             Our Services
           </Link>

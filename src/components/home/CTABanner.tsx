@@ -6,14 +6,14 @@ import { ArrowRight } from "lucide-react";
 
 export default function CTABanner() {
   return (
-    <section className="py-24 bg-[#faf4f1] dark:bg-[#0d0d0d]">
+    <section className="py-12 md:py-16 lg:py-24 bg-[#faf4f1] dark:bg-[#0d0d0d]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#e8735f] to-[#c55a45] p-12 md:p-16 text-center"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#e8735f] to-[#c55a45] p-8 sm:p-12 md:p-16 text-center"
         >
           {/* Background pattern */}
           <div
@@ -24,10 +24,10 @@ export default function CTABanner() {
             }}
           />
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 break-words">
               Ready to Build Something Great?
             </h2>
-            <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 text-sm sm:text-base md:text-lg mb-8 max-w-xl mx-auto">
               Let&apos;s turn your idea into a product. Start the conversation today.
             </p>
             <Link

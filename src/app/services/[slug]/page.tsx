@@ -45,9 +45,9 @@ export default async function ServicePage({ params }: Props) {
       />
 
       {/* What We Offer */}
-      <section className="py-24">
+      <section className="py-12 md:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             <div>
               <SectionHeader badge="Capabilities" title="What We Offer" align="left" />
               <ul className="space-y-4">
@@ -79,10 +79,10 @@ export default async function ServicePage({ params }: Props) {
       </section>
 
       {/* Process */}
-      <section className="py-24 bg-[#f5f0ec] dark:bg-[#1a1a1a]">
+      <section className="py-12 md:py-16 lg:py-24 bg-[#f5f0ec] dark:bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader badge="Methodology" title="Our Process" subtitle="How we approach every engagement." />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.process.map((p, i) => (
               <div key={p.step} className="p-6 rounded-2xl bg-white dark:bg-[#0d0d0d] border border-[#e5ddd8] dark:border-[#3d3d3d]/50">
                 <div className="text-4xl font-bold text-[#e8735f]/20 mb-4">0{i + 1}</div>
@@ -95,10 +95,10 @@ export default async function ServicePage({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
+      <section className="py-12 md:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-4">Ready to Start a Project?</h2>
-          <p className="text-[#4b5563] dark:text-[#9ca3af] text-lg mb-8">Let&apos;s talk about what we can build together.</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-4">Ready to Start a Project?</h2>
+          <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm sm:text-base md:text-lg mb-8">Let&apos;s talk about what we can build together.</p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#e8735f] text-white font-semibold hover:bg-[#d4654f] transition-all hover:scale-105"

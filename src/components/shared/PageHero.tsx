@@ -10,9 +10,9 @@ interface PageHeroProps {
 
 export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
+    <section className="relative pt-24 md:pt-32 pb-12 md:pb-20 overflow-hidden">
       {/* Glow effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#e8735f]/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[200px] md:w-[600px] md:h-[400px] bg-[#e8735f]/5 rounded-full blur-[60px] md:blur-[100px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {badge && (
@@ -29,7 +29,7 @@ export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl md:text-6xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-6 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-6 leading-tight break-words"
         >
           {title}
         </motion.h1>
@@ -38,7 +38,7 @@ export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[#4b5563] dark:text-[#9ca3af] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+            className="text-[#4b5563] dark:text-[#9ca3af] text-sm sm:text-base md:text-lg lg:text-xl max-w-xl md:max-w-2xl mx-auto leading-relaxed"
           >
             {subtitle}
           </motion.p>

@@ -43,7 +43,7 @@ export default function Navbar() {
               alt="Softwave Innovation"
               width={120}
               height={48}
-              className="h-12 w-auto"
+              className="h-10 md:h-12 w-auto"
               priority
             />
           </Link>

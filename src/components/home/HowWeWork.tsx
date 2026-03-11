@@ -33,14 +33,14 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-    <section className="py-24 bg-[#faf4f1] dark:bg-[#0d0d0d]">
+    <section className="py-12 md:py-16 lg:py-24 bg-[#faf4f1] dark:bg-[#0d0d0d]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Our Process"
           title="How We Work"
           subtitle="A structured approach that delivers consistent results — every time."
         />
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, i) => {
             const Icon = step.icon;
             return (

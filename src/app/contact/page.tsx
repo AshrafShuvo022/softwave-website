@@ -36,9 +36,9 @@ export default function ContactPage() {
         subtitle="Tell us about your project. We'll get back to you within 24 hours."
       />
 
-      <section className="py-24">
+      <section className="py-12 md:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16">
             {/* Form */}
             <div className="lg:col-span-3">
               {submitted ? (

@@ -19,7 +19,7 @@ export default function BlogPage() {
         title="The Softwave Blog"
         subtitle="Technical insights, industry trends, and perspectives from our engineering team."
       />
-      <section className="py-24">
+      <section className="py-12 md:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {posts.length === 0 ? (
             <p className="text-center text-[#6b7280]">No posts yet. Check back soon.</p>
