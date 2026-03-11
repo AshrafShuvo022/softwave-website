@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"E:/softwave website\" && npx create-next-app@latest . --typescript --tailwind --app --src-dir --no-git --eslint --import-alias \"@/*\" --yes 2>&1)",
+      "Bash(cd \"E:/softwave website\" && npx create-next-app@latest tmp-softwave --typescript --tailwind --app --src-dir --no-git --eslint --import-alias \"@/*\" --yes 2>&1)",
+      "Bash(ls \"E:/softwave website/tmp-softwave/\" && cp -r \"E:/softwave website/tmp-softwave/.\" \"E:/softwave website/\" 2>&1 || true)",
+      "Bash(cd \"E:/softwave website\" && cp -r tmp-softwave/. . 2>&1; ls -la)",
+      "Bash(cd \"E:/softwave website\" && npm install framer-motion lucide-react 2>&1 | tail -10)"
+    ]
+  }
+}

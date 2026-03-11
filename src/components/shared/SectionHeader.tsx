@@ -1,0 +1,25 @@
+interface SectionHeaderProps {
+  badge?: string;
+  title: string;
+  subtitle?: string;
+  align?: "left" | "center";
+}
+
+export default function SectionHeader({ badge, title, subtitle, align = "center" }: SectionHeaderProps) {
+  const alignClass = align === "left" ? "text-left" : "text-center";
+  const maxWidthClass = align === "center" ? "mx-auto" : "";
+
+  return (
+    <div className={`mb-12 ${alignClass}`}>
+      {badge && (
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e8735f]/10 border border-[#e8735f]/20 text-[#e8735f] text-sm font-medium mb-4">
+          {badge}
+        </div>
+      )}
+      <h2 className="text-3xl md:text-4xl font-bold text-[#faf4f1] mb-4">{title}</h2>
+      {subtitle && (
+        <p className={`text-[#9ca3af] text-lg max-w-2xl leading-relaxed ${maxWidthClass}`}>{subtitle}</p>
+      )}
+    </div>
+  );
+}
