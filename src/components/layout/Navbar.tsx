@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import Image from "next/image";
+import { useTheme } from "@/components/ThemeProvider";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -17,6 +18,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -27,7 +29,9 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#0d0d0d]/95 backdrop-blur-md border-b border-[#3d3d3d]/50 shadow-lg" : "bg-transparent"
+        scrolled
+          ? "bg-white/95 dark:bg-[#0d0d0d]/95 backdrop-blur-md border-b border-[#e5ddd8]/80 dark:border-[#3d3d3d]/50 shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +57,7 @@ export default function Navbar() {
                 className={`text-sm font-medium transition-colors ${
                   pathname === link.href
                     ? "text-[#e8735f]"
-                    : "text-[#9ca3af] hover:text-[#faf4f1]"
+                    : "text-[#4b5563] dark:text-[#9ca3af] hover:text-[#1a1a1a] dark:hover:text-[#faf4f1]"
                 }`}
               >
                 {link.label}
@@ -61,8 +65,15 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA + Mobile Toggle */}
+          {/* CTA + Theme Toggle + Mobile Toggle */}
           <div className="flex items-center gap-4">
+            <button
+              onClick={toggle}
+              className="p-2 rounded-lg text-[#4b5563] dark:text-[#9ca3af] hover:text-[#1a1a1a] dark:hover:text-[#faf4f1] hover:bg-[#f0ebe8] dark:hover:bg-[#1a1a1a]/50 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
             <Link
               href="/contact"
               className="hidden md:inline-flex items-center px-4 py-2 rounded-lg bg-[#e8735f] text-white text-sm font-medium hover:bg-[#d4654f] transition-colors"
@@ -71,7 +82,7 @@ export default function Navbar() {
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden text-[#9ca3af] hover:text-[#faf4f1] transition-colors"
+              className="md:hidden text-[#4b5563] dark:text-[#9ca3af] hover:text-[#1a1a1a] dark:hover:text-[#faf4f1] transition-colors"
             >
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -81,7 +92,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#0d0d0d]/98 border-b border-[#3d3d3d]/50 px-4 pb-4">
+        <div className="md:hidden bg-white/98 dark:bg-[#0d0d0d]/98 border-b border-[#e5ddd8] dark:border-[#3d3d3d]/50 px-4 pb-4">
           <div className="flex flex-col gap-4 pt-4">
             {navLinks.map((link) => (
               <Link
@@ -89,19 +100,30 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={`text-sm font-medium transition-colors ${
-                  pathname === link.href ? "text-[#e8735f]" : "text-[#9ca3af]"
+                  pathname === link.href
+                    ? "text-[#e8735f]"
+                    : "text-[#4b5563] dark:text-[#9ca3af]"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[#e8735f] text-white text-sm font-medium hover:bg-[#d4654f] transition-colors"
-            >
-              Get In Touch
-            </Link>
+            <div className="flex items-center gap-3">
+              <Link
+                href="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[#e8735f] text-white text-sm font-medium hover:bg-[#d4654f] transition-colors"
+              >
+                Get In Touch
+              </Link>
+              <button
+                onClick={() => { toggle(); setMobileOpen(false); }}
+                className="p-2 rounded-lg text-[#4b5563] dark:text-[#9ca3af] hover:text-[#1a1a1a] dark:hover:text-[#faf4f1] hover:bg-[#f0ebe8] dark:hover:bg-[#1a1a1a]/50 transition-colors"
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </button>
+            </div>
           </div>
         </div>
       )}

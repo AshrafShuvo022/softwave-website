@@ -16,9 +16,9 @@ export default function SectionHeader({ badge, title, subtitle, align = "center"
           {badge}
         </div>
       )}
-      <h2 className="text-3xl md:text-4xl font-bold text-[#faf4f1] mb-4">{title}</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-4">{title}</h2>
       {subtitle && (
-        <p className={`text-[#9ca3af] text-lg max-w-2xl leading-relaxed ${maxWidthClass}`}>{subtitle}</p>
+        <p className={`text-[#4b5563] dark:text-[#9ca3af] text-lg max-w-2xl leading-relaxed ${maxWidthClass}`}>{subtitle}</p>
       )}
     </div>
   );

@@ -33,7 +33,7 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-    <section className="py-24 bg-[#0d0d0d]">
+    <section className="py-24 bg-[#faf4f1] dark:bg-[#0d0d0d]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Our Process"
@@ -54,17 +54,17 @@ export default function HowWeWork() {
               >
                 {/* Connector line */}
                 {i < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-[calc(100%-1rem)] w-full h-px bg-gradient-to-r from-[#3d3d3d] to-transparent z-0" />
+                  <div className="hidden md:block absolute top-8 left-[calc(100%-1rem)] w-full h-px bg-gradient-to-r from-[#e5ddd8] dark:from-[#3d3d3d] to-transparent z-0" />
                 )}
-                <div className="relative z-10 p-6 rounded-2xl bg-[#1a1a1a] border border-[#3d3d3d]/50">
+                <div className="relative z-10 p-6 rounded-2xl bg-white dark:bg-[#1a1a1a] border border-[#e5ddd8] dark:border-[#3d3d3d]/50">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-[#e8735f]/10 flex items-center justify-center flex-shrink-0">
                       <Icon className="w-6 h-6 text-[#e8735f]" />
                     </div>
-                    <span className="text-4xl font-bold text-[#3d3d3d] leading-none mt-1">{step.step}</span>
+                    <span className="text-4xl font-bold text-[#e5ddd8] dark:text-[#3d3d3d] leading-none mt-1">{step.step}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-[#faf4f1] mb-2">{step.title}</h3>
-                  <p className="text-[#9ca3af] text-sm leading-relaxed">{step.description}</p>
+                  <h3 className="text-lg font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-2">{step.title}</h3>
+                  <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
             );

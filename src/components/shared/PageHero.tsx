@@ -29,7 +29,7 @@ export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl md:text-6xl font-bold text-[#faf4f1] mb-6 leading-tight"
+          className="text-4xl md:text-6xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-6 leading-tight"
         >
           {title}
         </motion.h1>
@@ -38,7 +38,7 @@ export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[#9ca3af] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+            className="text-[#4b5563] dark:text-[#9ca3af] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
             {subtitle}
           </motion.p>

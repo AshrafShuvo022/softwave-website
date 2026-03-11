@@ -20,7 +20,7 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0d0d0d] border-t border-[#3d3d3d]/50">
+    <footer className="bg-[#faf4f1] dark:bg-[#0d0d0d] border-t border-[#e5ddd8] dark:border-[#3d3d3d]/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
@@ -34,7 +34,7 @@ export default function Footer() {
                 className="h-14 w-auto"
               />
             </Link>
-            <p className="text-[#9ca3af] text-sm leading-relaxed mb-6">
+            <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm leading-relaxed mb-6">
               Building software that moves businesses forward. Custom solutions across web, mobile, AI, data, and cloud.
             </p>
             <div className="flex items-center gap-4">
@@ -42,7 +42,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#9ca3af] hover:text-[#e8735f] transition-colors"
+                className="text-[#4b5563] dark:text-[#9ca3af] hover:text-[#e8735f] transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -50,13 +50,13 @@ export default function Footer() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#9ca3af] hover:text-[#e8735f] transition-colors"
+                className="text-[#4b5563] dark:text-[#9ca3af] hover:text-[#e8735f] transition-colors"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a
                 href="mailto:hello@softwaveinnovation.com"
-                className="text-[#9ca3af] hover:text-[#e8735f] transition-colors"
+                className="text-[#4b5563] dark:text-[#9ca3af] hover:text-[#e8735f] transition-colors"
               >
                 <Mail className="w-5 h-5" />
               </a>
@@ -65,13 +65,13 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-[#faf4f1] font-semibold text-sm uppercase tracking-wider mb-4">Services</h4>
+            <h4 className="text-[#1a1a1a] dark:text-[#faf4f1] font-semibold text-sm uppercase tracking-wider mb-4">Services</h4>
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[#9ca3af] hover:text-[#e8735f] text-sm transition-colors"
+                    className="text-[#4b5563] dark:text-[#9ca3af] hover:text-[#e8735f] text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -82,13 +82,13 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-[#faf4f1] font-semibold text-sm uppercase tracking-wider mb-4">Company</h4>
+            <h4 className="text-[#1a1a1a] dark:text-[#faf4f1] font-semibold text-sm uppercase tracking-wider mb-4">Company</h4>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[#9ca3af] hover:text-[#e8735f] text-sm transition-colors"
+                    className="text-[#4b5563] dark:text-[#9ca3af] hover:text-[#e8735f] text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -99,8 +99,8 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[#faf4f1] font-semibold text-sm uppercase tracking-wider mb-4">Get In Touch</h4>
-            <p className="text-[#9ca3af] text-sm mb-4">Ready to start your next project? Let&apos;s talk.</p>
+            <h4 className="text-[#1a1a1a] dark:text-[#faf4f1] font-semibold text-sm uppercase tracking-wider mb-4">Get In Touch</h4>
+            <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm mb-4">Ready to start your next project? Let&apos;s talk.</p>
             <a
               href="mailto:hello@softwaveinnovation.com"
               className="text-[#e8735f] text-sm hover:text-[#d4654f] transition-colors"
@@ -118,7 +118,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-[#3d3d3d]/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-[#e5ddd8] dark:border-[#3d3d3d]/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#6b7280] text-sm">
             &copy; {new Date().getFullYear()} Softwave Innovation. All rights reserved.
           </p>

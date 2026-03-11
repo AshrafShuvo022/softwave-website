@@ -16,7 +16,7 @@ const iconMap: Record<string, ElementType> = {
 
 export default function ServicesPage() {
   return (
-    <div className="bg-[#0d0d0d]">
+    <div className="bg-[#faf4f1] dark:bg-[#0d0d0d]">
       <PageHero
         badge="What We Do"
         title="Our Services"
@@ -30,13 +30,13 @@ export default function ServicesPage() {
               return (
                 <div
                   key={service.slug}
-                  className="p-8 rounded-2xl bg-[#1a1a1a] border border-[#3d3d3d]/50 hover:border-[#e8735f]/40 transition-all group flex flex-col"
+                  className="p-8 rounded-2xl bg-white dark:bg-[#1a1a1a] border border-[#e5ddd8] dark:border-[#3d3d3d]/50 hover:border-[#e8735f]/40 transition-all group flex flex-col"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-[#e8735f]/10 flex items-center justify-center mb-6 group-hover:bg-[#e8735f]/20 transition-colors">
                     {Icon && <Icon className="w-7 h-7 text-[#e8735f]" />}
                   </div>
-                  <h3 className="text-xl font-bold text-[#faf4f1] mb-3">{service.name}</h3>
-                  <p className="text-[#9ca3af] text-sm leading-relaxed mb-6 flex-1">{service.description}</p>
+                  <h3 className="text-xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-3">{service.name}</h3>
+                  <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm leading-relaxed mb-6 flex-1">{service.description}</p>
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center gap-2 text-[#e8735f] text-sm font-medium hover:text-[#d4654f] transition-colors"

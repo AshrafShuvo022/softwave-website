@@ -38,7 +38,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <section className="py-24 bg-[#1a1a1a]">
+    <section className="py-24 bg-[#f5f0ec] dark:bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="By the Numbers"
@@ -53,10 +53,10 @@ export default function Stats() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="text-center p-8 rounded-2xl bg-[#0d0d0d] border border-[#3d3d3d]/50"
+              className="text-center p-8 rounded-2xl bg-white dark:bg-[#0d0d0d] border border-[#e5ddd8] dark:border-[#3d3d3d]/50"
             >
               <Counter value={stat.value} suffix={stat.suffix} />
-              <p className="text-[#9ca3af] text-sm mt-2">{stat.label}</p>
+              <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm mt-2">{stat.label}</p>
             </motion.div>
           ))}
         </div>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="bg-[#0d0d0d]">
+    <div className="bg-[#faf4f1] dark:bg-[#0d0d0d]">
       <PageHero
         badge="Insights & Updates"
         title="The Softwave Blog"
@@ -23,7 +23,7 @@ export default function BlogPage() {
             {blogPosts.map((post) => (
               <article
                 key={post.slug}
-                className="p-6 rounded-2xl bg-[#1a1a1a] border border-[#3d3d3d]/50 hover:border-[#e8735f]/40 transition-all group flex flex-col"
+                className="p-6 rounded-2xl bg-white dark:bg-[#1a1a1a] border border-[#e5ddd8] dark:border-[#3d3d3d]/50 hover:border-[#e8735f]/40 transition-all group flex flex-col"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="px-2 py-0.5 rounded-full bg-[#e8735f]/10 text-[#e8735f] text-xs font-medium">
@@ -34,11 +34,11 @@ export default function BlogPage() {
                     {post.readTime} min read
                   </div>
                 </div>
-                <h2 className="text-xl font-bold text-[#faf4f1] mb-3 group-hover:text-[#e8735f] transition-colors">
+                <h2 className="text-xl font-bold text-[#1a1a1a] dark:text-[#faf4f1] mb-3 group-hover:text-[#e8735f] transition-colors">
                   {post.title}
                 </h2>
-                <p className="text-[#9ca3af] text-sm leading-relaxed mb-4 flex-1">{post.excerpt}</p>
-                <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#3d3d3d]/50">
+                <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm leading-relaxed mb-4 flex-1">{post.excerpt}</p>
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#e5ddd8] dark:border-[#3d3d3d]/50">
                   <span className="text-[#6b7280] text-xs">
                     {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
                   </span>
