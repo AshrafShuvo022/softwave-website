@@ -55,7 +55,7 @@ export default function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="mailto:hello@softwaveinnovation.com"
+                href="mailto:contact@softwaveinnovation.com"
                 className="text-[#4b5563] dark:text-[#9ca3af] hover:text-[#e8735f] transition-colors"
               >
                 <Mail className="w-5 h-5" />
@@ -102,10 +102,10 @@ export default function Footer() {
             <h4 className="text-[#1a1a1a] dark:text-[#faf4f1] font-semibold text-sm uppercase tracking-wider mb-4">Get In Touch</h4>
             <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm mb-4">Ready to start your next project? Let&apos;s talk.</p>
             <a
-              href="mailto:hello@softwaveinnovation.com"
+              href="mailto:contact@softwaveinnovation.com"
               className="text-[#e8735f] text-sm hover:text-[#d4654f] transition-colors break-all"
             >
-              hello@softwaveinnovation.com
+              contact@softwaveinnovation.com
             </a>
             <div className="mt-6">
               <Link
