@@ -22,6 +22,9 @@ export async function POST(req: NextRequest) {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+      tls: {
+        rejectUnauthorized: false, // allow self-signed certs on hosted servers
+      },
     });
 
     // Email to Softwave (notification)
@@ -108,9 +111,10 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error("Email error:", error);
+    const message = error instanceof Error ? error.message : String(error);
+    console.error("Email error:", message);
     return NextResponse.json(
-      { error: "Failed to send email. Please try again." },
+      { error: message },
       { status: 500 }
     );
   }
