@@ -29,9 +29,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="Softwave Innovation"
-                width={140}
-                height={56}
-                className="h-14 w-auto"
+                width={2500}
+                height={928}
+                className="h-10 md:h-12 w-auto"
               />
             </Link>
             <p className="text-[#4b5563] dark:text-[#9ca3af] text-sm leading-relaxed mb-6">

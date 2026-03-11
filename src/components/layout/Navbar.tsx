@@ -35,15 +35,15 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
               alt="Softwave Innovation"
-              width={120}
-              height={48}
-              className="h-10 md:h-12 w-auto"
+              width={2500}
+              height={928}
+              className="h-12 md:h-14 w-auto"
               priority
             />
           </Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-base font-medium tracking-wide transition-colors ${
                   pathname === link.href
                     ? "text-[#e8735f]"
                     : "text-[#4b5563] dark:text-[#9ca3af] hover:text-[#1a1a1a] dark:hover:text-[#faf4f1]"
@@ -76,7 +76,7 @@ export default function Navbar() {
             </button>
             <Link
               href="/contact"
-              className="hidden md:inline-flex items-center px-4 py-2 rounded-lg bg-[#e8735f] text-white text-sm font-medium hover:bg-[#d4654f] transition-colors"
+              className="hidden md:inline-flex items-center px-5 py-2.5 rounded-lg bg-[#e8735f] text-white text-base font-medium hover:bg-[#d4654f] transition-colors"
             >
               Get In Touch
             </Link>
